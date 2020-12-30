@@ -13,7 +13,7 @@ import subprocess
 import os
 from flask import Flask, render_template, redirect, url_for, request, make_response
 import time
-from config.py import iface_name, looping, update_interval, web_port
+from config import iface_name, looping, update_interval, web_port
 from datetime import datetime
 import multiprocessing
 
@@ -91,8 +91,10 @@ if __name__ == "__main__":
     
     p1.start()
     p2.start()
+
     try:
-        os.mkdir('images')
+        os.mkdir('static')
+        os.mkdir('static/images')
     except Exception as err:
         print(err)
         exit()

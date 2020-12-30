@@ -34,7 +34,7 @@ cd vnstat-dashboard
 ```
 Then install the requirements to run the script
 ```
-python3 -m pip -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 And the needed installations are now done
 
