@@ -9,20 +9,11 @@ import subprocess
 import os
 from flask import Flask, render_template, redirect, url_for, request, make_response
 import time
+from config.py import iface_name, looping, update_interval, web_port
 from datetime import datetime
 import multiprocessing
 
 app = Flask(__name__)
-
-# CONFIGURATION!!
-# Write here the interface to keep tracking of
-iface_name = "em0"
-
-# Write here if you want looping or not
-looping = True
-
-# If you put looping as True, write here the update interval (in seconds)
-update_interval = 5
 
 ##############
 # DO NOT CHANGE ANYTHING BELOW HERE
@@ -92,7 +83,7 @@ def updater(interval):
             time.sleep(interval)
 
 def start_app():
-    app.run(host='0.0.0.0', debug=True, port='8000')
+    app.run(host='0.0.0.0', port=web_port)
 
 if __name__ == "__main__":
     p1 = multiprocessing.Process(target=updater, args=(update_interval,))
