@@ -5,6 +5,10 @@ __version__ = "1.0"
 __maintainer__ = "Dni Gamer"
 __email__ = "dnigamerofficial@gmail.com"
 
+##############
+# DO NOT CHANGE ANYTHING BELOW HERE
+##############
+
 import subprocess
 import os
 from flask import Flask, render_template, redirect, url_for, request, make_response
@@ -14,10 +18,6 @@ from datetime import datetime
 import multiprocessing
 
 app = Flask(__name__)
-
-##############
-# DO NOT CHANGE ANYTHING BELOW HERE
-##############
 
 @app.route('/')
 def index():
