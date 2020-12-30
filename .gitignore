@@ -1,4 +1,6 @@
+.gitignore
 .vscode/
 static/
 images/
 .git/
+__pycache__
