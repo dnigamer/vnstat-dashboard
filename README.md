@@ -6,17 +6,17 @@ To start, you need to install git, python3 and vnstat on your machine.
 
 ### Ubuntu / Debian
 ```
-sudo apt install git python3 python3-pip vnstat
+sudo apt install git python3 python3-pip vnstat vnstati
 ```
 
 ### CentOS / RHEL
 ```
-yum install git python3 python3-pip vnstat
+yum install git python3 python3-pip vnstat vnstati
 ```
 
 ### Arch Linux / Manjaro Linux
 ```
-pacman -S git python3 python3-pip vnstat
+pacman -S git python3 python3-pip vnstat vnstati
 ```
 (search on Google how to install git, python3 and vnstat in your distro if it's not here)
 
