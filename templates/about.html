@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>vnStat traffic meters dashboard - about page</title>
+        <meta charset="utf-8">
+        <!-- Bootstrap things (to make it look cool) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+        </nav>
+        <br>
+        <div class="container">
+            <h1>About page</h1>
+            <p>Check here what is this page all about.</p><br>
+            <h3>Introduction</h3>
+            <p>This is basically a traffic usage monitor using vnStat (for measuring) and vnStati (for graphical design). This whole dashboard runs in Python using Flask and it requires almost no configuration.</p>
+            <h3>How does it work</h3>
+            <p>The way this works is by using the vnStati command to generate tables of network traffic usage so that you can have a more graphical vision of the normal vnStat database.</p>
+            <p>This even uses a automatic updater for the vnStati images that you can set up your own custom time to update.</p>
+            <h3>Where to get this</h3>
+            <p>You can get this dashboard on my github page clicking <a href="https://github.com/dnigamer/vnstat-dashboard">here</a>.</p>
+        </div>
+    </body>
+</html>

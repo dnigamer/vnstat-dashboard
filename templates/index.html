@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>vnStat traffic meters dashboard</title>
+        <meta charset="utf-8">
+        <!-- Bootstrap things (to make it look cool) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <form action="{{ url_for('handler') }}" method="post">
+                    <button type="submit" name="method" value="forcereload" class="btn btn-primary">Force system reload</button>
+                </form>
+              </li>
+            </ul>
+        </nav>
+        <br>
+        <div class="container">
+            <h1>vnStat traffic meters dashboard</h1>
+            <p>Check here the network traffic meters of your system.</p><br>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#summary">Summary</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#minute">Minutes usage</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#hourly">Hourly usage</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#daily">Daily usage</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#monthly">Monthly usage</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="summary" class="container tab-pane active">
+                    <br>
+                    <h3>Summary</h3>
+                    <p>Summary view of the stats</p>
+                    <img alt="This image couldn't be loaded. Please click on the button (Force system reload) to try again." src="{{ url_for('static', filename='images/sum.png') }}" />
+                </div>
+                <div id="minute" class="tab-pane container fade">
+                    <br>
+                    <h3>Minutes usage</h3>
+                    <p>This is the 5 minutes usage by the server</p>
+                    <img alt="This image couldn't be loaded. Please click on the button (Force system reload) to try again." src="{{ url_for('static', filename='images/minutes.png') }}" />
+                </div>
+                <div id="hourly" class="tab-pane container fade">
+                    <br>
+                    <h3>Hourly usage</h3>
+                    <p>This is the hourly usage by the server</p>
+                    <img alt="This image couldn't be loaded. Please click on the button (Force system reload) to try again." src="{{ url_for('static', filename='images/hourly.png') }}" />
+                </div>
+                <div id="daily" class="tab-pane container fade">
+                    <br>
+                    <h3>Daily usage</h3>
+                    <p>This is the daily usage by the server.</p>
+                    <img alt="This image couldn't be loaded. Please click on the button (Force system reload) to try again." src="{{ url_for('static', filename='images/daily.png') }}" />
+                </div>
+                <div id="monthly" class="tab-pane container fade">
+                    <br>    
+                    <h3>Monthly usage</h3>
+                    <p>This is the monthly usage by the server.</p>
+                    <img alt="This image couldn't be loaded. Please click on the button (Force system reload) to try again." src="{{ url_for('static', filename='images/monthly.png') }}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
